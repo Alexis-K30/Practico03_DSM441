@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_general">16dp</dimen>
+    <dimen name="margen_estandar">12dp</dimen>
+    <dimen name="margen_pequeno">8dp</dimen>
+    <dimen name="tamano_imagen_producto">64dp</dimen>
+</resources>

@@ -1,0 +1,39 @@
+# Archivos de compilación
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+build/
+**/build/
+
+# Caché de Gradle
+.gradle/
+**/.gradle/
+
+# Caché del compilador de Kotlin
+.kotlin/
+
+# Configuración local de Android Studio
+.idea/
+*.iml
+
+# Rutas del SDK de tu computadora
+local.properties
+
+# Archivos generados
+captures/
+.externalNativeBuild/
+.cxx/
+*.log
+
+# Claves de firma (nunca se suben)
+*.jks
+*.keystore
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db

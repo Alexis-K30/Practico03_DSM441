@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Tienda Butiti</string>
+    <string name="titulo_catalogo">Catálogo del Proveedor</string>
+    <string name="hint_buscar_producto">Buscar producto…</string>
+    <string name="error_generico_catalogo">No se pudo cargar el catálogo</string>
+    <string name="sin_resultados_busqueda">No se encontraron productos con ese nombre</string>
+
+    <string name="titulo_inventario">Mi Inventario</string>
+    <string name="boton_catalogo_proveedor">Catálogo Proveedor</string>
+    <string name="boton_reporte">Reporte</string>
+    <string name="boton_buscar_id">Buscar ID</string>
+    <string name="boton_crear_producto">+ Crear Producto</string>
+    <string name="sin_productos_inventario">Aún no hay productos en tu inventario</string>
+    <string name="dialogo_producto_titulo">¿Qué querés hacer?</string>
+    <string name="dialogo_producto_modificar">Modificar</string>
+    <string name="dialogo_producto_eliminar">Eliminar</string>
+    <string name="confirmar_eliminar_producto_titulo">Eliminar producto</string>
+    <string name="confirmar_eliminar_producto_mensaje">¿Estás seguro de que querés eliminar este producto? Esta acción no se puede deshacer</string>
+    <string name="confirmar_eliminar_si">Sí, eliminar</string>
+    <string name="confirmar_eliminar_no">Cancelar</string>
+    <string name="producto_eliminado_exito">Producto eliminado correctamente</string>
+
+    <string name="titulo_crear_producto">Nuevo Producto</string>
+    <string name="hint_nombre_producto">Nombre del producto</string>
+    <string name="hint_descripcion_producto">Descripción</string>
+    <string name="hint_precio_producto">Precio</string>
+    <string name="hint_stock_producto">Stock (unidades)</string>
+    <string name="label_categoria">Categoría</string>
+    <string name="boton_guardar_producto">Guardar Producto</string>
+    <string name="error_nombre_vacio">El nombre no puede estar vacío</string>
+    <string name="error_descripcion_vacia">La descripción no puede estar vacía</string>
+    <string name="error_precio_invalido">El precio debe ser mayor que 0</string>
+    <string name="error_stock_invalido">El stock debe ser un número entero mayor o igual a 0</string>
+    <string name="error_sin_categoria">Seleccioná una categoría</string>
+    <string name="producto_creado_exito">Producto guardado correctamente</string>
+
+    <string name="titulo_actualizar_producto">Editar Producto</string>
+    <string name="boton_actualizar_producto">Guardar Cambios</string>
+    <string name="producto_actualizado_exito">Producto actualizado correctamente</string>
+    <string name="extra_producto_id">producto_id</string>
+
+    <string name="titulo_categorias">Categorías</string>
+    <string name="boton_ver_categorias">Categorías</string>
+    <string name="boton_nueva_categoria">+ Nueva Categoría</string>
+    <string name="titulo_nueva_categoria">Nueva categoría</string>
+    <string name="titulo_editar_categoria">Editar categoría</string>
+    <string name="hint_nombre_categoria">Nombre de la categoría</string>
+    <string name="hint_descripcion_categoria">Descripción</string>
+    <string name="boton_guardar_categoria">Guardar</string>
+    <string name="sin_categorias">Aún no hay categorías registradas</string>
+    <string name="error_nombre_categoria_vacio">El nombre de la categoría no puede estar vacío</string>
+    <string name="error_descripcion_categoria_vacia">La descripción de la categoría no puede estar vacía</string>
+    <string name="categoria_guardada_exito">Categoría guardada correctamente</string>
+    <string name="categoria_actualizada_exito">Categoría actualizada correctamente</string>
+    <string name="categoria_eliminada_exito">Categoría eliminada correctamente</string>
+    <string name="confirmar_eliminar_categoria_titulo">Eliminar categoría</string>
+    <string name="confirmar_eliminar_categoria_mensaje">¿Estás seguro de que querés eliminar esta categoría? Esta acción no se puede deshacer</string>
+
+    <string name="boton_volver">Volver</string>
+</resources>

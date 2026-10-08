@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_app"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:id="@+id/tvNombreNegocio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/primario"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTituloInventario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/titulo_inventario"
+        android:textColor="@color/texto_secundario"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tvNombreNegocio"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Fila 1: acceso al catálogo del proveedor, a todo el ancho -->
+    <Button
+        android:id="@+id/btnIrCatalogoProveedor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_estandar"
+        android:text="@string/boton_catalogo_proveedor"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:backgroundTint="@color/acento"
+        android:textColor="@color/blanco"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloInventario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Fila 2: Reporte y Buscar por ID, mitad y mitad -->
+    <LinearLayout
+        android:id="@+id/filaAccesos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_pequeno"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@id/btnIrCatalogoProveedor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnIrReporte"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="@string/boton_reporte"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:backgroundTint="@color/primario_oscuro"
+            android:textColor="@color/blanco" />
+
+        <Button
+            android:id="@+id/btnBuscarPorId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="@string/boton_buscar_id"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:backgroundTint="@color/primario_oscuro"
+            android:textColor="@color/blanco" />
+
+    </LinearLayout>
+
+    <!-- Fila 3: Crear producto y Categorías, mitad y mitad -->
+    <LinearLayout
+        android:id="@+id/filaCrear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_pequeno"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@id/filaAccesos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnCrearProducto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="@string/boton_crear_producto"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:backgroundTint="@color/primario"
+            android:textColor="@color/blanco" />
+
+        <Button
+            android:id="@+id/btnIrCategorias"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="@string/boton_ver_categorias"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:backgroundTint="@color/primario_oscuro"
+            android:textColor="@color/blanco" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSinProductos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sin_productos_inventario"
+        android:textColor="@color/texto_secundario"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvInventario"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margen_estandar"
+        app:layout_constraintTop_toBottomOf="@id/filaCrear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
