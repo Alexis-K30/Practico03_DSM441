@@ -1,5 +1,6 @@
 package com.udb.tienda.pb243032.ma243080.model.proveedor
 
+import com.udb.tienda.pb243032.ma243080.model.mensajeDeFalla
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -24,7 +25,7 @@ class CatalogoRepository {
             }
 
             override fun onFailure(call: Call<CatalogoRespuesta>, t: Throwable) {
-                alError("Fallo de conexión: ${t.message}")
+                alError(mensajeDeFalla(t))
             }
         })
     }
@@ -45,7 +46,7 @@ class CatalogoRepository {
             }
 
             override fun onFailure(call: Call<CatalogoRespuesta>, t: Throwable) {
-                alError("Fallo de conexión: ${t.message}")
+                alError(mensajeDeFalla(t))
             }
         })
     }
