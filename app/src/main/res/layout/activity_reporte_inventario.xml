@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootReporte"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_app"
+    tools:context=".view.ReporteInventarioActivity">
+
+    <TextView
+        android:id="@+id/tvTituloReporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_reporte_inventario"
+        android:textColor="@color/primario"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtituloReporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Resumen generado con OkHttp y Corrutinas"
+        android:textColor="@color/texto_secundario"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloReporte"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardResumen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_estandar"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="@color/blanco"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtituloReporte"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_general">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_total_productos"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvTotalProductosVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primario"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="12" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="8dp"
+                android:background="#E0E0E0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_valor_total"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvValorTotalVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/acento"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="$1,450.00" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvHeaderStockBajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_estandar"
+        android:text="@string/titulo_stock_bajo"
+        android:textColor="@color/texto_principal"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/cardResumen"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressReporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSinStockBajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sin_stock_bajo"
+        android:textColor="@color/texto_secundario"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tvHeaderStockBajo"
+        app:layout_constraintBottom_toTopOf="@id/btnVolverReporte"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStockBajo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margen_pequeno"
+        android:layout_marginBottom="@dimen/margen_pequeno"
+        app:layout_constraintTop_toBottomOf="@id/tvHeaderStockBajo"
+        app:layout_constraintBottom_toTopOf="@id/btnVolverReporte"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnVolverReporte"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/boton_volver"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/primario_oscuro"
+        android:textColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
