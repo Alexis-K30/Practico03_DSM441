@@ -26,7 +26,7 @@ class ProductoAdapter(
         val producto = productos[position]
 
         holder.binding.tvNombreProductoItem.text = producto.nombre
-        holder.binding.tvCategoriaProductoItem.text = producto.categoria
+        holder.binding.tvCategoriaProductoItem.text = "ID: ${producto.id} • ${producto.categoria}"
         holder.binding.tvPrecioProductoItem.text = "$${producto.precio}"
         holder.binding.tvStockProductoItem.text = "Stock: ${producto.stock}"
 

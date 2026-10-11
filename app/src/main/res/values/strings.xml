@@ -56,5 +56,17 @@
     <string name="confirmar_eliminar_categoria_titulo">Eliminar categoría</string>
     <string name="confirmar_eliminar_categoria_mensaje">¿Estás seguro de que querés eliminar esta categoría? Esta acción no se puede deshacer</string>
 
+    <string name="titulo_reporte_inventario">Reporte de Inventario</string>
+    <string name="label_total_productos">Total de productos:</string>
+    <string name="label_valor_total">Valor total del inventario:</string>
+    <string name="titulo_stock_bajo">Productos con Stock Bajo (&lt; 5 unidades)</string>
+    <string name="sin_stock_bajo">No hay productos con stock bajo en el inventario</string>
+    <string name="titulo_buscar_id_dialogo">Buscar producto por ID</string>
+    <string name="hint_ingresar_id">Ingresá el ID del producto</string>
+    <string name="boton_buscar">Buscar</string>
+    <string name="error_id_vacio">Por favor ingresá un ID válido</string>
+    <string name="producto_no_encontrado_msg">Producto no encontrado (Código HTTP 404)</string>
+    <string name="detalle_producto_titulo">Detalle del Producto</string>
+
     <string name="boton_volver">Volver</string>
 </resources>
